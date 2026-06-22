@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { @apply bg-slate-950 text-slate-100 antialiased; }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-700 rounded-full; }
+  input[type='date']::-webkit-calendar-picker-indicator { filter: invert(0.5); }
+  option { background: #1e293b; color: #f1f5f9; }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.04] border border-white/[0.07] backdrop-blur-sm;
+  }
+  .glass-hover {
+    @apply hover:bg-white/[0.07] hover:border-white/[0.12] transition-all;
+  }
+  .input-field {
+    @apply w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2.5 text-sm text-white
+           focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06] transition;
+  }
+  .btn-primary {
+    @apply bg-emerald-500 hover:bg-emerald-400 active:bg-emerald-600
+           text-slate-900 font-semibold px-4 py-2 rounded-lg text-sm
+           transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply glass glass-hover text-slate-400 hover:text-white
+           px-3 py-2 rounded-lg text-sm font-medium;
+  }
+}
