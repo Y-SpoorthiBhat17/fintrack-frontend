@@ -41,30 +41,30 @@ resetPassword: (d: object) => api.post('/api/auth/reset-password', d),
 };
 
 export const transactionAPI = {
-  getAll: (params?: object) => api.get('/transactions', { params }),
-  create: (d: object) => api.post('/transactions', d),
-  update: (id: string, d: object) => api.put(`/transactions/${id}`, d),
-  delete: (id: string) => api.delete(`/transactions/${id}`),
-  getSummary: (params?: object) => api.get('/transactions/summary', { params }),
-  getMonthly: (params?: object) => api.get('/transactions/monthly', { params }),
-  getByCategory: (params?: object) => api.get('/transactions/by-category', { params }),
-  getCategories: () => api.get('/transactions/categories'),
+  getAll: (params?: object) => api.get('/api/transactions', { params }),
+  create: (d: object) => api.post('/api/transactions', d),
+  update: (id: string, d: object) => api.put(`/api/transactions/${id}`, d),
+  delete: (id: string) => api.delete(`/api/transactions/${id}`),
+  getSummary: (params?: object) => api.get('/api/transactions/summary', { params }),
+  getMonthly: (params?: object) => api.get('/api/transactions/monthly', { params }),
+  getByCategory: (params?: object) => api.get('/api/transactions/by-category', { params }),
+  getCategories: () => api.get('/api/transactions/categories'),
 };
 
 export const companyAPI = {
-  getMine: () => api.get('/company/me'),
+  getMine: () => api.get('/api/company/me'),
 };
 
 export const budgetAPI = {
-  getAll: (params?: object) => api.get('/budgets', { params }),
-  create: (d: object) => api.post('/budgets', d),
-  update: (id: string, d: object) => api.put(`/budgets/${id}`, d),
-  delete: (id: string) => api.delete(`/budgets/${id}`),
-  sync: (d: object) => api.post('/budgets/sync', d),
+  getAll: (params?: object) => api.get('/api/budgets', { params }),
+  create: (d: object) => api.post('/api/budgets', d),
+  update: (id: string, d: object) => api.put(`/api/budgets/${id}`, d),
+  delete: (id: string) => api.delete(`/api/budgets/${id}`),
+  sync: (d: object) => api.post('/api/budgets/sync', d),
 };
 
 export const aiAPI = {
-  getInsights: (params?: object) => api.get('/ai/insights', { params }),
+  getInsights: (params?: object) => api.get('/api/ai/insights', { params }),
 };
 
 export default api;
