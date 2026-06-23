@@ -31,13 +31,13 @@ api.interceptors.response.use(
 );
 
 export const authAPI = {
-  register: (d: object) => api.post('/auth/register', d),
-  login: (d: object) => api.post('/auth/login', d),
-  getMe: () => api.get('/auth/me'),
-  updateProfile: (d: object) => api.put('/auth/profile', d),
-  changePassword: (d: object) => api.put('/auth/password', d),
-  forgotPassword: (d: object) => api.post('/auth/forgot-password', d),
-  resetPassword: (d: object) => api.post('/auth/reset-password', d),
+  register: (d: object) => api.post('/api/auth/register', d),
+login: (d: object) => api.post('/api/auth/login', d),
+getMe: () => api.get('/api/auth/me'),
+updateProfile: (d: object) => api.put('/api/auth/profile', d),
+changePassword: (d: object) => api.put('/api/auth/password', d),
+forgotPassword: (d: object) => api.post('/api/auth/forgot-password', d),
+resetPassword: (d: object) => api.post('/api/auth/reset-password', d),
 };
 
 export const transactionAPI = {
